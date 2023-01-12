@@ -2,10 +2,68 @@ body {
   margin: 0;
   padding: 0;
   width: 100vw;
+  font-family: 'Epilogue', sans-serif;
+  text-transform: lowercase;
+  font-size: 18px;
 }
 
 main {
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+section {
+  width: 100vw;
+  display: flex;
+}
+
+#about,
+#projects {
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 0.5em;
+}
+
+#contact {
+  position: fixed;
+  bottom: 0;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: center;
+  gap: 2em;
+  box-sizing: border-box;
+  padding: 1em;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: dodgerblue;
+}
+
+h1 {
+  padding-top: 2em;
+}
+
+h1:hover {
+  color: orangered;
+}
+
+h2:hover {
+  color: rgb(220, 76, 215);
+}
+
+h3:hover {
+  color: lime;
 }
