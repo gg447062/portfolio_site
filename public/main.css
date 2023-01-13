@@ -1,3 +1,12 @@
+:root {
+  --black: rgb(29, 29, 30);
+  --white: rgb(249, 245, 245);
+  --fuschia: rgb(220, 76, 215);
+  --orange: rgb(255, 98, 0);
+  --green: rgb(12, 222, 12);
+  --blue: rgb(0, 149, 255);
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -5,6 +14,11 @@ body {
   font-family: 'Epilogue', sans-serif;
   text-transform: lowercase;
   font-size: 18px;
+  background-color: var(--white);
+}
+
+body.invert {
+  background-color: var(--black);
 }
 
 main {
@@ -25,7 +39,11 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.5em;
+}
+
+#projects {
+  position: fixed;
+  bottom: 6em;
 }
 
 #contact {
@@ -34,36 +52,51 @@ section {
   flex-direction: row;
   align-items: baseline;
   justify-content: center;
-  gap: 2em;
+  gap: 1em;
   box-sizing: border-box;
   padding: 1em;
 }
 
 a {
   text-decoration: none;
-  color: black;
+  color: var(--blue);
+  transition: letter-spacing 1s ease;
+  padding: 0.45em 0.5em 0.25em 0.5em;
+}
+
+a:hover,
+a:visited:hover {
+  color: var(--white);
+  background-color: var(--blue);
 }
 
 a:visited {
-  color: black;
+  color: var(--blue);
 }
 
-a:hover {
-  color: dodgerblue;
+h1,
+h2 {
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 h1 {
-  padding-top: 2em;
+  color: var(--orange);
 }
 
-h1:hover {
-  color: orangered;
+h2 {
+  color: var(--fuschia);
 }
 
-h2:hover {
-  color: rgb(220, 76, 215);
+h3 {
+  color: var(--green);
 }
 
-h3:hover {
-  color: lime;
+span {
+  transition: letter-spacing 2s ease;
+}
+
+span:hover {
+  letter-spacing: 0.5em;
 }
