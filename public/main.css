@@ -5,6 +5,9 @@
   --orange: rgb(255, 98, 0);
   --green: rgb(12, 222, 12);
   --blue: rgb(0, 149, 255);
+  --yellow: rgb(255, 251, 0);
+  --modal-img-width: 400px;
+  --border: 1px solid var(--blue);
 }
 
 body {
@@ -23,10 +26,13 @@ body.invert {
 
 main {
   min-height: 100vh;
+  width: 100vw;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  padding-top: 1em;
 }
 
 section {
@@ -55,6 +61,18 @@ section {
   gap: 1em;
   box-sizing: border-box;
   padding: 1em;
+}
+
+h1:hover,
+h2:hover,
+h3:hover,
+p:hover {
+  cursor: crosshair;
+}
+
+p {
+  margin: 0;
+  text-align: center;
 }
 
 a {
@@ -94,9 +112,54 @@ h3 {
 }
 
 span {
-  transition: letter-spacing 2s ease;
+  transition: all 1s ease;
 }
 
 span:hover {
-  letter-spacing: 0.5em;
+  letter-spacing: 0.25em;
+}
+
+.modal {
+  border: var(--border);
+  width: var(--modal-img-width);
+  height: auto;
+  display: flex;
+  opacity: 0;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  z-index: 1000;
+  background-color: var(--white);
+  color: var(--blue);
+  transition: opacity 0.3s ease-out;
+  pointer-events: none;
+}
+
+.active {
+  opacity: 1;
+}
+
+.modal p {
+  padding: 0.5em;
+}
+
+img {
+  width: var(--modal-img-width);
+  height: auto;
+  border-bottom: var(--border);
+}
+
+#kalaca-modal {
+  top: 5%;
+  left: 2.5%;
+}
+
+#ld-modal {
+  top: 25%;
+  left: 35%;
+}
+
+#forming-modal {
+  top: 60%;
+  left: 70%;
 }

@@ -19,11 +19,27 @@
       </section>
       <section id="projects">
         <h3>Projects:</h3>
-        <a href="http://kalaca.herokuapp.com" target="_blank">Kalaca</a>
-        <a href="https://web.lexicondevils.xyz" target="_blank"
+        <a
+          class="project-link"
+          id="kalaca"
+          href="http://kalaca.herokuapp.com"
+          target="_blank"
+          >Kalaca</a
+        >
+        <a
+          class="project-link"
+          id="ld"
+          href="https://web.lexicondevils.xyz"
+          target="_blank"
           >Lexicon Devils</a
         >
-        <a href="https://forming.lexicondevils.xyz" target="_blank">Forming</a>
+        <a
+          class="project-link"
+          id="forming"
+          href="https://forming.lexicondevils.xyz"
+          target="_blank"
+          >Forming</a
+        >
       </section>
       <section id="contact">
         <h3>contact:</h3>
@@ -33,6 +49,21 @@
           >LinkedIn</a
         >
       </section>
+      <div class="modal" id="kalaca-modal">
+        <div></div>
+        <img src="assets/kalaca.png" />
+        <p>space-shooter game built using javascript and phaser3.js</p>
+      </div>
+      <div class="modal" id="ld-modal">
+        <img src="assets/lexicondevils.png" />
+        <p>homepage for lexicondevils DAO built using vanilla js</p>
+      </div>
+      <div class="modal" id="forming-modal">
+        <img src="assets/forming.png" />
+        <p>
+          info and submission page built using react, express, and airtable api
+        </p>
+      </div>
     </main>
     <script src="./main.js" charset="utf-8"></script>
   </body>
