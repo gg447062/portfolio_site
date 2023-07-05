@@ -18,6 +18,7 @@ body {
   text-transform: lowercase;
   font-size: 18px;
   background-color: var(--white);
+  cursor: crosshair;
 }
 
 body.invert {
@@ -154,9 +155,19 @@ img {
   left: 2.5%;
 }
 
+#synth_world-modal {
+  top: 35%;
+  left: 15%;
+}
+
 #ld-modal {
   top: 25%;
   left: 35%;
+}
+
+#flpxld-modal {
+  top: 35%;
+  left: 60%;
 }
 
 #forming-modal {
