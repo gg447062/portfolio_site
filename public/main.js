@@ -1,41 +1,30 @@
-function makeSpans() {
-  const tags = document.querySelectorAll(['h1', 'h2']);
-  tags.forEach((tag) => {
-    const letters = tag.innerHTML.split('');
-    tag.innerHTML = '';
+const projectTiles = document.querySelectorAll('.tile-wrapper');
+const catSelectors = document.querySelectorAll('.category');
 
-    letters.forEach((letter) => {
-      const span = document.createElement('span');
-      span.innerHTML = letter;
-      tag.appendChild(span);
-    });
+let showing = 'all';
+console.log(window.location);
+
+function setShowing(e) {
+  showing = e.target.id;
+
+  projectTiles.forEach((tile) => {
+    let data = tile.querySelector('.project-tile').dataset.category;
+    if (data == showing || showing == 'all') {
+      tile.style.display = 'block';
+    } else {
+      tile.style.display = 'none';
+    }
   });
+
+  for (let c of catSelectors) {
+    if (c.id == showing) {
+      c.classList.add('selected');
+    } else {
+      c.classList.remove('selected');
+    }
+  }
 }
 
-function randomizeFontSize(min, max) {
-  document.querySelectorAll(['h1', 'h2']).forEach((el) => {
-    const randomVal = Math.random() * (max - min) + min;
-    el.style.fontSize = `${randomVal.toFixed(1)}em`;
-  });
+for (let c of catSelectors) {
+  c.addEventListener('click', (e) => setShowing(e));
 }
-
-function showModal(e) {
-  document.getElementById(`${e.target.id}-modal`).classList.add('active');
-}
-
-function hideModal(e) {
-  document.getElementById(`${e.target.id}-modal`).classList.remove('active');
-}
-
-makeSpans();
-
-randomizeFontSize(9, 11);
-
-document.querySelectorAll('a.project-link').forEach((link) => {
-  link.addEventListener('mouseenter', (e) => {
-    showModal(e);
-  });
-  link.addEventListener('mouseleave', (e) => {
-    hideModal(e);
-  });
-});
