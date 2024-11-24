@@ -12,83 +12,88 @@
     <link rel="stylesheet" href="./main.css" />
   </head>
   <body>
+    <nav>
+      <p class="name">Gabriel Gutierrez</p>
+      <p class="category selected" id="all">all</p>
+      <p class="category" id="code">code</p>
+      <p class="category" id="video">video/animation</p>
+      <p class="category" id="music">music</p>
+    </nav>
+    <div class="spacer"></div>
     <main>
-      <h1>Gabriel Gutierrez</h1>
-      <section id="about">
-        <h2>web developer</h2>
-      </section>
-      <section id="projects">
-        <h3>Projects:</h3>
-        <a
-          class="project-link"
-          id="kalaca"
-          href="http://kalaca.herokuapp.com"
-          target="_blank"
-          >Kalaca</a
-        >
-        <a
-          class="project-link"
-          id="synth_world"
-          href="https://synth-world.herokuapp.com/"
-          target="_blank"
-          >Synth World</a
-        >
-        <a
-          class="project-link"
-          id="ld"
-          href="https://web.lexicondevils.xyz"
-          target="_blank"
-          >Lexicon Devils</a
-        >
-        <a
-          class="project-link"
-          id="flpxld"
-          href="http://floppy.lexicondevils.xyz/"
-          target="_blank"
-          >Floppy X Lexicon Devils</a
-        >
-        <a
-          class="project-link"
-          id="forming"
-          href="https://forming.lexicondevils.xyz"
-          target="_blank"
-          >Forming</a
-        >
-      </section>
-      <section id="contact">
-        <h3>contact:</h3>
-        <a href="mailto:gg447062@gmail.com">email</a>
-        <a href="https://github.com/gg447062" target="_blank">Github</a>
-        <a href="https://www.linkedin.com/in/gg447062/" target="_blank"
-          >LinkedIn</a
-        >
-      </section>
-      <div class="modal" id="kalaca-modal">
-        <div></div>
-        <img src="assets/kalaca.png" />
-        <p>space-shooter game built using javascript and phaser3.js</p>
+      <div class="tile-wrapper">
+        <div class="project-tile" data-category="code">
+          <h3>kalaca</h3>
+          <div>
+            <a href="./kalaca.html">
+              <img src="assets/kalaca.png" />
+            </a>
+          </div>
+        </div>
       </div>
-      <div class="modal" id="synth_world-modal">
-        <div></div>
-        <img src="assets/synth_world.png" />
-        <p>browser based music sequencer using react and tone.js</p>
+      <div class="tile-wrapper">
+        <div class="project-tile" data-category="code">
+          <h3>synth world</h3>
+          <div>
+            <a href="./synth-world.html">
+              <img src="assets/synth_world.png" />
+            </a>
+          </div>
+        </div>
       </div>
-      <div class="modal" id="ld-modal">
-        <img src="assets/lexicondevils.png" />
-        <p>homepage for lexicondevils DAO built using vanilla js</p>
+      <div class="tile-wrapper">
+        <div class="project-tile" data-category="code">
+          <h3>p5 sketches</h3>
+          <div></div>
+        </div>
       </div>
-      <div class="modal" id="flpxld-modal">
-        <img src="assets/flpxld.png" />
-        <p>
-          page for a collaboration between floppy and lexicondevils DAO using
-          vanilla js
-        </p>
+      <div class="tile-wrapper">
+        <div class="project-tile" data-category="video">
+          <h3>voices</h3>
+          <div><img src="assets/voices.webp" /></div>
+        </div>
       </div>
-      <div class="modal" id="forming-modal">
-        <img src="assets/forming.png" />
-        <p>
-          info and submission page built using react, express, and airtable api
-        </p>
+      <div class="tile-wrapper">
+        <div class="project-tile" data-category="video">
+          <h3>max preparat</h3>
+          <div><img src="assets/maxpreparat.png" /></div>
+        </div>
+      </div>
+      <div class="tile-wrapper">
+        <div class="project-tile" data-category="video">
+          <h3>la luz</h3>
+          <div><img src="assets/la-luz.webp" /></div>
+        </div>
+      </div>
+      <div class="tile-wrapper">
+        <div class="project-tile" data-category="music">
+          <h3>vats</h3>
+          <div></div>
+        </div>
+      </div>
+      <div class="tile-wrapper">
+        <div class="project-tile" data-category="music">
+          <h3>gen pop</h3>
+          <div></div>
+        </div>
+      </div>
+      <div class="tile-wrapper">
+        <div class="project-tile" data-category="music">
+          <h3>american nudism</h3>
+          <div></div>
+        </div>
+      </div>
+      <div class="tile-wrapper">
+        <div class="project-tile" data-category="music">
+          <h3>ar sun</h3>
+          <div></div>
+        </div>
+      </div>
+      <div class="tile-wrapper">
+        <div class="project-tile" data-category="music">
+          <h3>tia rosa</h3>
+          <div></div>
+        </div>
       </div>
     </main>
     <script src="./main.js" charset="utf-8"></script>
