@@ -5,7 +5,7 @@
       "year": "2021",
       "src": "assets/kalaca.png",
       "category": "code",
-      "description": "this is a game built using javascript and the phaser3.js game engine. the idea for this game came about after a discussion with a friend about how the protagonists of video games tend to be conventionally 'good' and the enemies conventionally 'bad'. we decided it would be interesting to make a game where the roles are reversed. here the protagonist is a diabolical skull and the enemies are angels. my role was design and development as well as creating the sprites. the music and sfx were made by my friend sam.",
+      "description": "This is a game built using javascript and the phaser3.js game engine. The idea for this game came about after a discussion with a friend about how the protagonists of video games tend to be conventionally 'good' and the enemies conventionally 'bad'. We decided it would be interesting to make a game where the roles are reversed. Here the protagonist is a diabolical skull and the enemies are angels. My role was design and development as well as creating the sprites. The music and sfx were made by my friend Sam.",
       "videoSrc": null,
       "externalLink": "http://kalaca.herokuapp.com/"
     },
@@ -14,7 +14,7 @@
       "year": "2022",
       "src": "assets/synth-world.png",
       "category": "code",
-      "description": "this is a browser based music sequencer and recorder, built using React and Tone.js. It consists of one polyphonic sampler 'synth', one monophonic sampler 'synth', and a 6 channel drum machine. the user can program a sequence on each of the instruments in real time, add effects and record their performance.",
+      "description": "This is a browser based music sequencer and recorder, built using React and Tone.js. It consists of one polyphonic sampler 'synth', one monophonic sampler 'synth', and a 6 channel drum machine. The user can program a sequence on each of the instruments in real time, add effects and record their performance.",
       "videoSrc": null,
       "externalLink": "http://synth-world.herokuapp.com/"
     },
@@ -68,7 +68,7 @@
       "year": "2022",
       "src": "assets/max-preparat.jpg",
       "category": "video",
-      "description": " this music video was an experiment with mixing analogue textures and digital animation techniques. The textures were hand painted with spray paint and acrylic paint and then scanned. The actual animation was done using adobe animate, creating digital shapes and applying the scanned textures to them.",
+      "description": "This music video was an experiment with mixing analogue textures and digital animation techniques. The textures were hand painted with spray paint and acrylic paint and then scanned. The actual animation was done using adobe animate, creating digital shapes and applying the scanned textures to them.",
       "videoSrc": "https://player.vimeo.com/video/1033598977?h=903877d5e4&title=0&byline=0&portrait=0&sidedock=0"
     },
     {
@@ -115,7 +115,7 @@
       "year": "2018-present",
       "src": "assets/arsun.jpg",
       "category": "music",
-      "description": " ARSUN is an ongoing experimental electronic dance music project that I have been a part of since 2018. I help compose the songs and am incharge of programming and sequencing sythesizers and drum machines as well as singing a bit. This is the most recent ep we released this year.",
+      "description": "ARSUN is an ongoing experimental electronic dance music project that I have been a part of since 2018. I help compose the songs and am incharge of programming and sequencing sythesizers and drum machines as well as singing a bit. This is the most recent ep we released this year.",
       "videoSrc": null,
       "audioSrc": "https://bandcamp.com/EmbeddedPlayer/album=3075586484/size=small/bgcol=ffffff/linkcol=0687f5/transparent=true/",
       "externalLink": null
