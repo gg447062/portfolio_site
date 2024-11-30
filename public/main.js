@@ -66,7 +66,17 @@ function populateProjectDetails(project) {
     videos.forEach((video) => (video.style.display = 'none'));
   }
 
-  desc.innerText = project.description;
+  if (project.name == 'la luz') {
+    let title = 'The Master and Margarita';
+    let text = project.description.split(title);
+    let p1 = document.createTextNode(text[0]);
+    let p2 = document.createTextNode(text[1]);
+    let span = document.createElement('span');
+    span.innerText = title;
+    desc.append(p1, span, p2);
+  } else {
+    desc.innerText = project.description;
+  }
 
   if (project.externalLink != null) {
     link.setAttribute('href', project.externalLink);
@@ -85,10 +95,12 @@ function populateP5Details(project) {
   let img = document.querySelector('.project-image');
   let video = document.querySelector('.project-video');
   let audio = document.querySelector('.project-audio');
+  let link = document.querySelector('.project-external-link');
 
   img.style.display = 'none';
   audio.style.display = 'none';
   video.style.display = 'none';
+  link.style.display = 'none';
   title.innerText = project.name;
   year.innerText = ` ${project.year}`;
   title.appendChild(year);
@@ -99,7 +111,6 @@ function showProjectDetails(e) {
   let project = projectData.filter((el) => {
     return el.name == e.target.dataset.project;
   })[0];
-
   if (project.name == 'p5 sketches') {
     populateP5Details(project);
     sketchGrid.style.display = 'grid';
