@@ -6,7 +6,6 @@
   --green: rgb(12, 222, 12);
   --blue: rgb(0, 149, 255);
   --riso-blue: rgb(50, 85, 164);
-  /* --riso-blue: rgb(0, 120, 191); */
   --yellow: rgb(255, 251, 0);
   --modal-img-width: 400px;
   --border: 1px solid var(--blue);
@@ -28,12 +27,19 @@ main {
   height: fit-content;
   overflow: scroll;
   width: 85vw;
+}
+
+.grid-wrapper,
+.p5-grid-wrapper {
+  --spacer: 1.5em;
   box-sizing: border-box;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 0.5em;
+  width: 85vw;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: min-content(1em);
+  padding: var(--spacer);
+  column-gap: var(--spacer);
+  row-gap: calc(var(--spacer) * 2);
 }
 
 nav {
@@ -44,11 +50,17 @@ nav {
   left: 0;
   display: flex;
   flex-direction: column;
-  border-width: 0 1px 0 0;
-  border-style: dotted;
-  border-color: var(--riso-blue);
   padding: 1em;
   box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: var(--riso-blue);
+}
+
+a:visited {
+  color: var(--riso-blue);
 }
 
 img {
@@ -84,39 +96,59 @@ span {
 }
 
 .tile-wrapper {
-  width: 33%;
-  height: calc(40vh - 0.3em);
-  padding: 0.5em;
+  width: 100%;
+  height: 100%;
   box-sizing: border-box;
 }
 
 .project-tile {
   width: 100%;
-  height: 100%;
-  text-align: center;
+  height: fit-content;
   padding: 0;
   box-sizing: border-box;
 }
 
 .project-tile h3 {
-  background-color: var(--riso-blue);
-  color: var(--white);
+  color: var(--riso-blue);
   margin: 0;
   padding: 0.5em 0;
 }
 
-.project-tile div {
-  border: 1px dashed var(--riso-blue);
-  height: 80%;
-  overflow: hidden;
-}
-
-.project-tile div img {
+.project-thumb {
   width: 100%;
-  max-height: 100%;
+  height: 25vh;
   object-fit: cover;
+  box-shadow: 0 0 10px 5px var(--riso-blue);
 }
 
-.project-details {
-  padding: 0 2em;
+.project-image {
+  max-height: 20em;
+}
+
+#project-details-modal {
+  position: absolute;
+  background-color: var(--white);
+  top: 0;
+  display: flex;
+  width: 100%;
+  max-width: 80%;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1em;
+}
+
+.project-description {
+  line-height: 1.5em;
+  margin: 0;
+}
+
+.project-details iframe {
+  max-width: 75%;
+}
+
+.project-details a {
+  font-size: 1.2em;
+  text-decoration: underline;
 }

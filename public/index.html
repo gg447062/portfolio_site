@@ -21,79 +21,58 @@
     </nav>
     <div class="spacer"></div>
     <main>
-      <div class="tile-wrapper">
-        <div class="project-tile" data-category="code">
-          <h3>kalaca</h3>
-          <div>
-            <a href="./kalaca.html">
-              <img src="assets/kalaca.png" />
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="tile-wrapper">
-        <div class="project-tile" data-category="code">
-          <h3>synth world</h3>
-          <div>
-            <a href="./synth-world.html">
-              <img src="assets/synth_world.png" />
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="tile-wrapper">
-        <div class="project-tile" data-category="code">
-          <h3>p5 sketches</h3>
-          <div></div>
-        </div>
-      </div>
-      <div class="tile-wrapper">
-        <div class="project-tile" data-category="video">
-          <h3>voices</h3>
-          <div><img src="assets/voices.webp" /></div>
-        </div>
-      </div>
-      <div class="tile-wrapper">
-        <div class="project-tile" data-category="video">
-          <h3>max preparat</h3>
-          <div><img src="assets/maxpreparat.png" /></div>
-        </div>
-      </div>
-      <div class="tile-wrapper">
-        <div class="project-tile" data-category="video">
-          <h3>la luz</h3>
-          <div><img src="assets/la-luz.webp" /></div>
-        </div>
-      </div>
-      <div class="tile-wrapper">
-        <div class="project-tile" data-category="music">
-          <h3>vats</h3>
-          <div></div>
-        </div>
-      </div>
-      <div class="tile-wrapper">
-        <div class="project-tile" data-category="music">
-          <h3>gen pop</h3>
-          <div></div>
-        </div>
-      </div>
-      <div class="tile-wrapper">
-        <div class="project-tile" data-category="music">
-          <h3>american nudism</h3>
-          <div></div>
-        </div>
-      </div>
-      <div class="tile-wrapper">
-        <div class="project-tile" data-category="music">
-          <h3>ar sun</h3>
-          <div></div>
-        </div>
-      </div>
-      <div class="tile-wrapper">
-        <div class="project-tile" data-category="music">
-          <h3>tia rosa</h3>
-          <div></div>
-        </div>
+      <div id="project-details-modal" style="display: none">
+        <h1 class="project-title">
+          <span class="project-year"></span>
+        </h1>
+        <img class="project-image" src="" />
+        <iframe
+          title="vimeo-player"
+          id="voices"
+          class="project-video"
+          src="https://player.vimeo.com/video/1033597178?h=0fc4ae6a48&title=0&byline=0&portrait=0&sidedock=0"
+          width="640"
+          height="360"
+          frameborder="0"
+          allowfullscreen
+          style="display: none"
+        ></iframe>
+        <iframe
+          title="vimeo-player"
+          class="project-video"
+          id="max-preparat"
+          src="https://player.vimeo.com/video/1033598977?h=903877d5e4&title=0&byline=0&portrait=0&sidedock=0"
+          width="640"
+          height="360"
+          frameborder="0"
+          allowfullscreen
+          style="display: none"
+        ></iframe>
+        <iframe
+          title="vimeo-player"
+          class="project-video"
+          id="la-luz"
+          src="https://player.vimeo.com/video/1033600054?h=e9edfd609d&title=0&byline=0&portrait=0&sidedock=0"
+          width="640"
+          height="360"
+          frameborder="0"
+          allowfullscreen
+          style="display: none"
+        ></iframe>
+        <iframe
+          class="project-audio"
+          style="border: 0; width: 100%; height: 42px"
+          src=""
+          seamless
+          ><a class="project-audio-link" href=""></a
+        ></iframe>
+        <p class="project-description"></p>
+        <a
+          class="project-external-link"
+          href=""
+          target="_blank"
+          rel="noopener"
+        ></a>
       </div>
     </main>
     <script src="./main.js" charset="utf-8"></script>
