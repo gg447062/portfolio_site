@@ -93,13 +93,13 @@ function populateP5Details(project) {
   let year = document.querySelector('.project-year');
   let desc = document.querySelector('.project-description');
   let img = document.querySelector('.project-image');
-  let video = document.querySelector('.project-video');
+  let videos = document.querySelectorAll('.project-video');
   let audio = document.querySelector('.project-audio');
   let link = document.querySelector('.project-external-link');
 
   img.style.display = 'none';
   audio.style.display = 'none';
-  video.style.display = 'none';
+  videos.forEach((video) => (video.style.display = 'none'));
   link.style.display = 'none';
   title.innerText = project.name;
   year.innerText = ` ${project.year}`;
@@ -128,7 +128,7 @@ function buildSketchGrid(sketches) {
   sketchGrid.classList.add('p5-grid-wrapper');
   for (let s of sketches) {
     const tile = document.createElement('div');
-    tile.classList.add('project-tile');
+    tile.classList.add('sketch-tile');
     sketchGrid.appendChild(tile);
 
     const link = document.createElement('a');
@@ -181,11 +181,13 @@ window.onload = async () => {
   const data = await response.json();
   projectData = data.projects;
 
-  buildGrid(projectData);
   let sketches = projectData.filter((el) => {
     return el.name == 'p5 sketches';
   })[0].sketches;
+
+  buildGrid(projectData);
   buildSketchGrid(sketches);
+
   projectTiles = document.querySelectorAll('.project-tile');
   projectTiles.forEach((tile) => {
     tile.addEventListener('click', (e) => {

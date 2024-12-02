@@ -100,7 +100,8 @@ span {
   box-sizing: border-box;
 }
 
-.project-tile {
+.project-tile,
+.sketch-tile {
   width: 100%;
   height: fit-content;
   padding: 0;
